@@ -8,5 +8,5 @@ Acessar o conteúdo de um arquivo chamado - . Esse nome é problemático, pois o
 
 ```bash
 ls
-- cat < -
+cat < -
 ```
