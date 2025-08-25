@@ -1,8 +1,10 @@
-# Level 0
+## Level 0
 
-Problema: Conectar ao host bandit0 utilizando o SSH, com o usuário bandit0 e senha fornecidos.
+### Problema: 
 
-## Solução:
+Conectar ao host bandit0 utilizando o SSH, com o usuário bandit0 e senha fornecidos.
+
+### Solução:
 
 Conexão do host bandit0 via secure shell (SSH)
 
