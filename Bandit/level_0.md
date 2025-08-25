@@ -13,7 +13,7 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 password: bandit0
 ```
 
-Visualição do conteúdo do arquivo `readme`:
+Comandos utilizados para visualizar o conteúdo do arquivo `readme`:
 
 ```bash
 ls
