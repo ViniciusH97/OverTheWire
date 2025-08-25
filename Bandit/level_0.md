@@ -11,7 +11,7 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 password: bandit0
 ```
 
-Visualizando o conteúdo do arquivo `readme`:
+Visualição do conteúdo do arquivo `readme`:
 
 ```bash
 ls
