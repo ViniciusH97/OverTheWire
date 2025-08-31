@@ -1,4 +1,4 @@
-# OverTheWire
+<img width="338" height="79" alt="image" src="https://github.com/user-attachments/assets/827881e9-0492-4dea-abd7-8a3991dc0a82" />
 
 ## O que é o OverTheWire
 
