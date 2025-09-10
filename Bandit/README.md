@@ -3,6 +3,8 @@
 - [Level 0](#Level-0)
 - [Level 1](#Level-1)
 
+---
+
 ## Level 0
 
 ---
@@ -26,8 +28,6 @@ Comandos utilizados para visualizar o conteúdo do arquivo `readme`:
 ls
 cat readme
 ```
-
-## Level 1
 
 ## Level 1
 
