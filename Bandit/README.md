@@ -10,8 +10,6 @@
 
 ## Level 0
 
----
-
 ### Problema: 
 
 Conectar ao host bandit0 utilizando o SSH, com o usuário bandit0 e senha fornecidos.
@@ -31,10 +29,9 @@ Comandos utilizados para visualizar o conteúdo do arquivo `readme`:
 ls
 cat readme
 ```
+---
 
 ## Level 1
-
----
 
 ### Problema: 
 
@@ -46,6 +43,7 @@ Acessar o conteúdo de um arquivo chamado - . Esse nome é problemático, pois o
 ls
 cat < -
 ```
+---
 
 ## Level 2
 
@@ -112,7 +110,7 @@ cat ./-file07
 
 senha: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
-
+---
 
 ## Level 5
 
