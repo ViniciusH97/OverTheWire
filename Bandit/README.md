@@ -114,6 +114,44 @@ senha: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 ## Level 5
 
-### Problema: 
+### Problema:
 
-### Solução: 
+Encontrar a senha em algum lugar no diretório inhere com as seguintes caracterísiticas:
+
+ - Legível para o ser humano
+ - 1033 bytes de tamanho
+ - não executável
+
+### Solução:
+
+- ls
+- cd inhere
+- find -size 1033c
+- cd maybehere07/
+- ls -a
+- cat .file2
+
+senha: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+---
+
+## Level 6
+
+### Problema:
+
+Encontrar a senha em um arquivo no servidor com as seguintes características:
+
+```bash
+dono por usuário  bandit7
+```
+  - dono por grupo bandit6
+  - 33 bytes de tamanho
+
+Solução:
+
+- cd /
+- find -user bandit7 -group bandit6 -size 33c 2>/dev/null
+- cat /var/lib/dpkg/info/bandit7.password
+
+senha: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
