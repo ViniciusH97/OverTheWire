@@ -125,13 +125,24 @@ Encontrar a senha em algum lugar no diretório inhere com as seguintes caracter�
 
 ### Solução:
 
-- ls
-- cd inhere
-- find -size 1033c
-- cd maybehere07/
-- ls -a
-- cat .file2
-
+```bash
+ls
+```
+```bash
+cd inhere
+```
+```bash
+find -size 1033c
+```
+```bash
+cd maybehere07/
+```
+```bash
+ls -a
+```
+```bash
+cat .file2
+```
 senha: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ---
@@ -150,9 +161,15 @@ dono por usuário  bandit7
 
 Solução:
 
-- cd /
-- find -user bandit7 -group bandit6 -size 33c 2>/dev/null
-- cat /var/lib/dpkg/info/bandit7.password
+```bash
+cd /
+```
+```bash
+find -user bandit7 -group bandit6 -size 33c 2>/dev/null
+```
+```bash
+cat /var/lib/dpkg/info/bandit7.password
+```
 
 senha: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
