@@ -27,11 +27,16 @@ São eles:
 
 ## Como jogar?
 
-Para jogar Wargames no OverTheWire, é necessário ter instalado o secure shell(SSH) em sua distribuição Linux. Primeiramente precisa selecionar o nível de dificuldade, é possível ver a lista do wargames em ordem de dificuldade. Sendo o Bandir, o mais fácil e o FormulaOne o nível mais difícil.
+Para jogar Wargames no OverTheWire, é necessário ter instalado o secure shell(SSH) em sua distribuição Linux. Caso não houver, instale utilizando o comando:
+```bash
+sudo apt install openssh-client openssh-server
+```
+
+Em seguida, selecione o nível de dificuldade, e níveis em cada Wargame. Na tela principal há uma lista dos wargames. Selecione o Bandit para começar, e clique no level 0.
 
 Para conectar com o host via ssh podemos usar o comando abaixo, esse é um exemplo para entrar no jogo Bandit0:
 
 ```bash
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
-e insira a senha. A partir desse momento, poderá seguir a resolução do problema.
+Insira a Senha `bandit0`. A partir desse momento, poderá seguir a resolução do problema.
