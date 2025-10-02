@@ -6,6 +6,7 @@
 - [Level 3](#Level-3)
 - [Level 5](#Level-5)
 - [Level 6](#Level-6)
+- [Level 7](#Level-7)
 
 ---
 
@@ -153,11 +154,9 @@ senha: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 Encontrar a senha em um arquivo no servidor com as seguintes características:
 
-```bash
-dono por usuário  bandit7
-```
-  - dono por grupo bandit6
-  - 33 bytes de tamanho
+- dono do usuário  bandit7
+- dono por grupo bandit6
+- 33 bytes de tamanho
 
 Solução:
 
@@ -170,7 +169,25 @@ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```bash
 cat /var/lib/dpkg/info/bandit7.password
 ```
-
 senha: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
 ---
+
 Level 7
+
+### Problema:
+
+Localizar a senha que está armazenada no arquivo data.txt na linha com o nome millionth
+
+**Solução:**
+
+```bash
+ls
+```
+```bash
+# Visualizar o conteúdo do arquivo
+cat data.txt
+```
+```bash
+grep millionth data.txt
+```
