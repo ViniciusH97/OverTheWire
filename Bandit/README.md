@@ -172,4 +172,5 @@ cat /var/lib/dpkg/info/bandit7.password
 ```
 
 senha: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
-
+---
+Level 7
