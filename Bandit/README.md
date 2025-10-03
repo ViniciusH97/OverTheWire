@@ -45,6 +45,9 @@ Acessar o conteúdo de um arquivo chamado - . Esse nome é problemático, pois o
 ls
 cat < -
 ```
+
+senha encontrada: ?
+
 ---
 
 ## Level 2
@@ -66,7 +69,7 @@ ou
 cat "./--spaces in this filename--"
 ```
 
-senha: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+senha encontrada: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
 ---
 
@@ -88,7 +91,7 @@ ls -a
 cat ...Hiding-From-You
 ```
 
-senha: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+senha encontrada: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 ---
 
@@ -110,7 +113,7 @@ cd inhere
 cat ./-file07
 ```
 
-senha: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+senha encontrada: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 ---
 
@@ -144,7 +147,7 @@ ls -a
 ```bash
 cat .file2
 ```
-senha: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+senha encontrada: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ---
 
@@ -169,7 +172,7 @@ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```bash
 cat /var/lib/dpkg/info/bandit7.password
 ```
-senha: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+senha encontrada: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ---
 
@@ -192,7 +195,7 @@ cat data.txt
 grep millionth data.txt
 ```
 
-senha: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+senha encontrada: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 ---
 
