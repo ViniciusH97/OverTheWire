@@ -31,6 +31,9 @@ Comandos utilizados para visualizar o conteúdo do arquivo `readme`:
 ls
 cat readme
 ```
+
+**Senha:** ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
 ---
 
 ## Level 1
@@ -46,7 +49,13 @@ ls
 cat < -
 ```
 
-senha encontrada: ?
+ou
+
+```bash
+cat ./-
+```
+
+**Senha:** 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
 ---
 
@@ -69,7 +78,7 @@ ou
 cat "./--spaces in this filename--"
 ```
 
-senha encontrada: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+**Senha:** MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
 ---
 
@@ -91,7 +100,7 @@ ls -a
 cat ...Hiding-From-You
 ```
 
-senha encontrada: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+**Senha:** 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 ---
 
@@ -113,7 +122,7 @@ cd inhere
 cat ./-file07
 ```
 
-senha encontrada: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+**Senha:** 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 ---
 
@@ -127,7 +136,7 @@ Encontrar a senha em algum lugar no diretório inhere com as seguintes caracter�
  - 1033 bytes de tamanho
  - não executável
 
-### Solução:
+**Solução:**
 
 ```bash
 ls
@@ -147,7 +156,7 @@ ls -a
 ```bash
 cat .file2
 ```
-senha encontrada: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+**Senha:** HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ---
 
@@ -161,7 +170,7 @@ Encontrar a senha em um arquivo no servidor com as seguintes características:
 - dono por grupo bandit6
 - 33 bytes de tamanho
 
-Solução:
+**Solução:**
 
 ```bash
 cd /
@@ -172,7 +181,7 @@ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```bash
 cat /var/lib/dpkg/info/bandit7.password
 ```
-senha encontrada: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+**Senha:** morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ---
 
@@ -195,12 +204,87 @@ cat data.txt
 grep millionth data.txt
 ```
 
-senha encontrada: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+
+**Senha:** dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 ---
 
 ## Level 8
 
 ### Problema:
+
+A senha para o próximo nível é armazenada no arquivo data.txt e é a única linha de texto que ocorre apenas uma vez
+
+**Solução**
+
+```bash
+# Visualizar o conteúdo do arquivo
+cat data.txt
+```
+```bash
+# ordenar o arquivo para juntar repedidos e filtrar o conteúdo que não repete
+sort data.txt | uniq -u
+```
+
+**Senha:** 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+---
+## Level 9
+
+### Problema
+
+A senha para o próximo nível é armazenada no arquivo data.txt em uma das poucas cordas legíveis por humanos, precedidas por várias ‘=’ personagens.
+
+**Solução**
+
+```bash
+cat data.txt
+```
+```bash
+strings data.txt
+```
+
+**Senha:** FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+--- 
+## Level 10
+
+### Problema
+
+A senha para o próximo nível é armazenada no arquivo data.txt, que contém dados codificados base64
+
+**Solução**
+
+```bash
+base64 -d data.txt
+```
+
+**Senha:** dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+---
+
+## Level 11
+
+### Problema
+
+A senha para o próximo nível é armazenada no arquivo data.txt, onde todas as letras minúsculas (a-z) e maiúsculas (A-Z) foram girado por 13 posições
+
+**Solução**
+```bash
+# Visualizar o conteúdo do arquivo data.txt
+cat data.txt
+```
+```bash
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+**Senha:** 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+---
+
+## Level 12
+
+### Problema
 
 
