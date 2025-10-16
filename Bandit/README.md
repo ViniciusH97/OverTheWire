@@ -119,7 +119,15 @@ ls
 cd inhere
 ```
 ```bash
+# Visualizar os tipos dos arquivos
+file ./-file*
+```
+```bash
 cat ./-file07
+```
+ou
+```bash
+cat -- -file07
 ```
 
 **Senha:** 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
@@ -286,5 +294,9 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ## Level 12
 
 ### Problema
+
+A senha para o próximo nível é armazenada no arquivo data.txt, que é um hexdump de um arquivo que tem sido repetidamente comprimido. Para este nível pode ser útil criar um diretório em /tmp em que você pode trabalhar. Use o mkdir com um nome de diretório difícil de adivinhar. Ou melhor, use o comando “mktemp -d”. Em seguida, copie o arquivo de dados usando cp e renomeie-o usando mv (leia o manpages!)
+
+**Solução**
 
 
