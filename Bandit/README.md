@@ -412,3 +412,33 @@ A senha para o próximo nível é armazenada em /etc/bandit_pass/bandit14 e só 
 --- 
 
 **Solução**
+
+```bash
+# Identificar a chave primária ssh
+cat sshkey.private
+```
+> Copie a chave RSA para um arquivo para o localhost, e execute o comando
+```bash
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+```
+> Você verá um aviso que a chave está desprotegida, isso acontece pois o arquivo está com privilégios para outros usuários, então altere apenas para o dono com o comando a seguir
+```bash
+chmod 600 sshkey.private
+```
+E execute o comando novamente
+```bash
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+```
+```bash
+# acesse a pasta e mostre a senha
+```bash
+cd /etc/bandit_pass/ && cat bandit14
+```
+
+**Senha:** MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+---
+
+## Level 14
+
+
