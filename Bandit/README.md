@@ -431,7 +431,6 @@ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 ```bash
 # acesse a pasta e mostre a senha
-```bash
 cd /etc/bandit_pass/ && cat bandit14
 ```
 
@@ -441,4 +440,34 @@ cd /etc/bandit_pass/ && cat bandit14
 
 ## Level 14
 
+A senha para o próximo nível pode ser recuperada enviando o senha do nível atual para a porta 30000 no localhost.
+Comandos que você pode precisar para resolver este nível
 
+ssh, telnet, nc, openssl, s_client, mapa
+
+
+**Solução**
+
+```bash
+# Enviar a senha bandit14 para o localhost na porta 30000
+cat bandit14 | nc localhost 30000
+```
+**Senha:** 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+--- 
+
+## Level 15
+
+A senha para o próximo nível pode ser recuperada enviando o senha do nível atual para a porta 30001 no localhost usando Criptografia SSL/TLS.
+
+Nota útil: Fazer “CONSUMIR”, “RENEGOCIAR” ou “KEYUPDATE”? Leia o Secção “COMANDOS CONECTADOS” na página de gestão.
+Comandos que você pode precisar para resolver este nível
+
+`ssh`, `telnet`, `nc`, `ncat`, `socat`, `openssl`, `s_client`, `nmap`, `netstat`, `ss`
+
+### Material de leitura útil
+
+[Secure Socket Layer/Transport Layer Security na Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+[Livro de receitas OpenSSL - Testes com OpenSSL](https://www.feistyduck.com/library/openssl-cookbook/online/testing-with-openssl/index.html)
+
+**Solução**
