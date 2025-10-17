@@ -297,6 +297,92 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 A senha para o próximo nível é armazenada no arquivo data.txt, que é um hexdump de um arquivo que tem sido repetidamente comprimido. Para este nível pode ser útil criar um diretório em /tmp em que você pode trabalhar. Use o mkdir com um nome de diretório difícil de adivinhar. Ou melhor, use o comando “mktemp -d”. Em seguida, copie o arquivo de dados usando cp e renomeie-o usando mv (leia o manpages!)
 
+### Comandos que você pode precisar para resolver este nível
+
+`grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd, mkdir, cp, mv, file`
+
+### Material de leitura útil
+
+**[Hexdump na Wikipédia](https://en.wikipedia.org/wiki/Hex_dump)**
+
+---
+
 **Solução**
 
+```bash
+# Visualizar conteúdo do arquivo
+cat data.txt
+```
 
+```bash
+# Entrar na pasta tmp
+cd /tmp
+```
+```bash
+# Criar um diretório temporário
+mktmp -d
+```
+```bash
+# copiar o arquivo data.txt para a pasta temporária
+cp ~/data.txt /tmp/tmp.JGT8lCwhih
+```
+```bash
+# Entrar na pasta e conferir o arquivo
+cd tmp.JGT8lCwhih && ls
+```
+```bash
+# Converter hexdump para binário e criar outro arquivo
+xxd -r data.txt > data
+```
+```bash
+# descobrir qual é o tipo do arquivo
+file data
+```
+```bash
+# Remover o data.txt e renomear o data para descompactar em formato .gz
+rm data.txt && mv data data.gz
+```
+```bash
+# decompactar data.gz
+gzip -d data.gz
+```
+```bash
+# ver o tipo do arquivo
+file data
+```
+```bash
+# renomeia o arquivo com a extensão .bz2
+mv data data.bz2
+```
+```bash
+# descompacta arquivo bzip2
+bzip2 -d data.bz2
+```
+> Segue essa lógica, descompactando o arquivo até encontrar à senha
+```bash
+cat data
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+```
+
+
+**Senha:** FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+---
+
+## Level 13
+
+**Problema**
+
+A senha para o próximo nível é armazenada em /etc/bandit_pass/bandit14 e só pode ser lido pelo usuário bandit14. Para este nível, você não recebe a próxima senha, mas você obter uma chave SSH privada que pode ser usada para fazer login no próximo nível. Nota: localhost é um nome de host que se refere à máquina você está trabalhando.
+
+### Comandos que você pode precisar para resolver este nível
+
+`ssh`, `telnet`, `nc`, `openssl`, `s_client`, `nmap`
+
+### Material de leitura útil
+
+**[SSH/OpenSSH/Keys](https://help.ubuntu.com/community/SSH/OpenSSH/Keys)**
+
+--- 
+
+**Solução**
