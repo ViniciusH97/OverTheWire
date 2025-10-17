@@ -1,4 +1,26 @@
-# Bandit
+# Bandido
+
+O jogo de guerra Bandit é destinado a iniciantes absolutos. Vai ensinar as noções básicas necessárias para poder jogar outros wargames. Se você perceber algo essencial está faltando ou tem ideias para novos níveis, por favor, deixe nós sabemos!
+
+## Nota para iniciantes
+
+Este jogo, como a maioria dos outros jogos, é organizado em níveis. Você começa em Nível 0 e tente “vencê-lo” ou “terminar”. Terminando um nível resulta em informações sobre como iniciar o próximo nível. As páginas deste site para “Nível `X`" contêm informações sobre como iniciar o nível X a partir do nível anterior. Por exemplo, A página para o Nível 1 tem informações sobre como obter acesso do Nível 0 ao Nível 1. Todos os níveis neste jogo ter uma página neste site, e todos eles estão vinculados a partir do sidemenu à esquerda desta página.
+
+Você vai encontrar muitas situações em que você não tem idéia do que fazer. **Não entre em pânico! Não desista!** O objetivo disso jogo é para você aprender o básico. Parte da aprendizagem do básico, é ler muitas informações novas. Se você nunca usou a linha de comando antes, uma boa primeira leitura é esta introdução aos comandos do usuário.
+
+Há várias coisas que você pode tentar quando não tem certeza de como continuar:
+
+1. Primeiro, se você conhece um comando, mas não sabe como usá-lo, tente o **manual** (página do manual) inserindo `man`. Por exemplo, o `man ls` para aprender sobre o comando `ls`. O comando `man` também tem um manual, experimente! Ao usar o `man`, pressione `q`para sair (você também pode usar `/`e `N`para pesquisar). 
+
+2. Segundo, se não houver uma página de `man`, o comando pode ser um shell embutido. Nesse caso, use o comando `--help`. Por exemplo, `cd --help`, seu mecanismo de ajuda é o seu amigo favorito. Saiba como fazer Use-o! Também recomendo o Google. Por fim, se você ainda está preso, você pode se juntar a nós via chat
+
+Você está pronto para começar! Comece com o Nível 0. Boa sorte!
+
+Observação para VMs: Você pode não conseguir se conectar ao overthewire.org via SSH com um _erro de tubulação quebrado_ quando o adaptador de rede para a VM estiver configurado para usar o modo NAT. Adicionando a configuração IPQoS throughputpara /etc/ssh/ssh_configdeve resolver a questão. Se isso não resolver seu problema, a única opção então é alterar o adaptador para o modo Bridged.
+
+---
+
+## ìndice
 
 - [Level 0](#Level-0)
 - [Level 1](#Level-1)
@@ -6,7 +28,11 @@
 - [Level 3](#Level-3)
 - [Level 5](#Level-5)
 - [Level 6](#Level-6)
-- [Level 7](#Level-7)
+- [Level 8](#Level-8)
+- [Level 9](#Level-9)
+- [Level 10](#Level-10)
+- [Level 11](#Level-11)
+- [Level 12](#Level-12)
 
 ---
 
