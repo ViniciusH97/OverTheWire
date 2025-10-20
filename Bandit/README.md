@@ -33,6 +33,9 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 - [Level 10](#Level-10)
 - [Level 11](#Level-11)
 - [Level 12](#Level-12)
+- [Level-13](#Level-13)
+- [Level-14](#Level-14)
+- [Level-15](#Level-15)
 
 ---
 
