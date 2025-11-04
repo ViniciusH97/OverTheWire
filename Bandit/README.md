@@ -16,7 +16,7 @@ Há várias coisas que você pode tentar quando não tem certeza de como continu
 
 Você está pronto para começar! Comece com o Nível 0. Boa sorte!
 
-Observação para VMs: Você pode não conseguir se conectar ao overthewire.org via SSH com um _erro de tubulação quebrado_ quando o adaptador de rede para a VM estiver configurado para usar o modo NAT. Adicionando a configuração IPQoS throughputpara /etc/ssh/ssh_configdeve resolver a questão. Se isso não resolver seu problema, a única opção então é alterar o adaptador para o modo Bridged.
+Observação para VMs: Você pode não conseguir se conectar ao overthewire.org via SSH com um _erro de tubulação quebrado_ quando o adaptador de rede para a VM estiver configurado para usar o modo NAT. Adicionando a configuração IPQoS throughputpara /etc/ssh/ssh_configdeve resolver a questão. Se isso não resolver , a única opção então é alterar o adaptador para o modo Bridged.
 
 ---
 
@@ -40,8 +40,6 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 ---
 
 ## Level 0
-
-### Problema: 
 
 Conectar ao host bandit0 utilizando o SSH, com o usuário bandit0 e senha fornecidos.
 
@@ -67,8 +65,6 @@ cat readme
 
 ## Level 1
 
-### Problema: 
-
 Acessar o conteúdo de um arquivo chamado - . Esse nome é problemático, pois o shell pode interpretar o - como uma opção do comando.
 
 ### Solução:
@@ -89,8 +85,6 @@ cat ./-
 ---
 
 ## Level 2
-
-### Problema: 
 
 Leitura do arquivo --spaces in this filename-- localizado no diretório do bandit2
 
@@ -113,8 +107,6 @@ cat "./--spaces in this filename--"
 
 ## Level 3
 
-### Problema: 
-
 Encontrar o conteúdo do arquivo escondido no diretório inhere
 
 ### Solução: 
@@ -134,8 +126,6 @@ cat ...Hiding-From-You
 ---
 
 ## Level 4
-
-### Problema: 
 
 A próxima senha está localizada em um arquivo legível a humanos
 
@@ -164,8 +154,6 @@ cat -- -file07
 ---
 
 ## Level 5
-
-### Problema:
 
 Encontrar a senha em algum lugar no diretório inhere com as seguintes caracterísiticas:
 
@@ -199,7 +187,6 @@ cat .file2
 
 ## Level 6
 
-### Problema:
 
 Encontrar a senha em um arquivo no servidor com as seguintes características:
 
@@ -224,7 +211,6 @@ cat /var/lib/dpkg/info/bandit7.password
 
 ## Level 7
 
-### Problema:
 
 Localizar a senha que está armazenada no arquivo data.txt na linha com o nome millionth
 
@@ -242,14 +228,12 @@ grep millionth data.txt
 ```
 
 
-
 **Senha:** dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 ---
 
 ## Level 8
 
-### Problema:
 
 A senha para o próximo nível é armazenada no arquivo data.txt e é a única linha de texto que ocorre apenas uma vez
 
@@ -267,9 +251,8 @@ sort data.txt | uniq -u
 **Senha:** 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 ---
-## Level 9
 
-### Problema
+## Level 9
 
 A senha para o próximo nível é armazenada no arquivo data.txt em uma das poucas cordas legíveis por humanos, precedidas por várias ‘=’ personagens.
 
@@ -287,8 +270,6 @@ strings data.txt
 --- 
 ## Level 10
 
-### Problema
-
 A senha para o próximo nível é armazenada no arquivo data.txt, que contém dados codificados base64
 
 **Solução**
@@ -302,8 +283,6 @@ base64 -d data.txt
 ---
 
 ## Level 11
-
-### Problema
 
 A senha para o próximo nível é armazenada no arquivo data.txt, onde todas as letras minúsculas (a-z) e maiúsculas (A-Z) foram girado por 13 posições
 
@@ -321,8 +300,6 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ---
 
 ## Level 12
-
-### Problema
 
 A senha para o próximo nível é armazenada no arquivo data.txt, que é um hexdump de um arquivo que tem sido repetidamente comprimido. Para este nível pode ser útil criar um diretório em /tmp em que você pode trabalhar. Use o mkdir com um nome de diretório difícil de adivinhar. Ou melhor, use o comando “mktemp -d”. Em seguida, copie o arquivo de dados usando cp e renomeie-o usando mv (leia o manpages!)
 
@@ -400,7 +377,6 @@ The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 
 ## Level 13
 
-**Problema**
 
 A senha para o próximo nível é armazenada em /etc/bandit_pass/bandit14 e só pode ser lido pelo usuário bandit14. Para este nível, você não recebe a próxima senha, mas você obter uma chave SSH privada que pode ser usada para fazer login no próximo nível. Nota: localhost é um nome de host que se refere à máquina você está trabalhando.
 
@@ -475,3 +451,26 @@ Comandos que você pode precisar para resolver este nível
 - [Livro de receitas OpenSSL - Testes com OpenSSL](https://www.feistyduck.com/library/openssl-cookbook/online/testing-with-openssl/index.html)
 
 **Solução**
+
+Para encontrar a próxima senha é necessário iniciar uma conexão SSL/TLS na porta 30001 ainda com o usuário bandit14. Para conectar à porta 30001 no localhost é necessário executar o seguinte comando:
+
+```bash
+openssl s_client -connect localhost:30001
+```
+> Será exibido no terminal as informações do certificado SSL e da conexão com a porta.
+
+Após carregar podemos enviar a senha e pressionar `Enter`.
+
+Senha: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+---
+
+## Level 16
+
+As credenciais para o próximo nível podem ser recuperadas enviando o senha do nível atual para uma porta no localhost no intervalo 31000 a 32000. Primeiro descubra qual dessas portas tem um servidor ouvindo sobre eles. Então descubra qual deles fala SSL/TLS e qual não faça. Há apenas 1 servidor que dará as próximas credenciais, o outros simplesmente enviarão de volta para você o que você enviar para ele.
+
+
+**Solução**
+
+
+
