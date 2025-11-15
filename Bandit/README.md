@@ -504,7 +504,7 @@ Agora, enviaremos a senha para todas as portas mapeadas até encontrar a chave p
 cat senha.txt | openssl s_client -connect localhost:[PORTA] -quiet
 ```
 
-Na resposta de alguma dessas portas irá retornar a chave privada RSA, copie para o arquivo `sshkey.private` e envie para host bandit17:
+Na resposta de alguma dessas portas irá retornar a chave privada RSA, copie e cole no arquivo `sshkey.private` em sua máquina host e envie para host bandit17:
 
 ```bash
 ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
