@@ -38,6 +38,7 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 - [Level-15](#Level-15)
 - [Level-16](#Level-16)
 - [Level-17](#Level-17)
+- [Level-18](#Level-18)
 
 ---
 
@@ -521,3 +522,22 @@ Comandos que você pode precisar para resolver este nível
 
 - cat, grep, ls, diff
 
+**Solução**
+
+Para solucionar esse level 17 precisamos saber oque foi alterado do arquivo `passswords.old` para o arquivo `passwords.new`. Vamos utilizar o `diff` para saber a linha e o conteúdo exato que foi alterado nos aquivos:
+
+```bash
+diff passwords.old passwords.new
+```
+
+Se você viu um ByeBye ! Não se preocupe, você passou do desafio :) 
+
+Senha: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+--- 
+
+## Level 18
+
+A senha para o próximo nível é armazenada em um arquivo readme em o homedirectory. Infelizmente, alguém modificou .bashrc para fazer loguem-no quando fizerem sessão com o SSH.
+
+**Solução**
