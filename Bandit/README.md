@@ -43,7 +43,7 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 
 Conectar ao host bandit0 utilizando o SSH, com o usuário bandit0 e senha fornecidos.
 
-### Solução:
+**Solução:**
 
 Conexão do host bandit0 via secure shell (SSH)
 
@@ -67,7 +67,7 @@ cat readme
 
 Acessar o conteúdo de um arquivo chamado - . Esse nome é problemático, pois o shell pode interpretar o - como uma opção do comando.
 
-### Solução:
+**Solução:**
 
 ```bash
 ls
@@ -88,7 +88,7 @@ cat ./-
 
 Leitura do arquivo --spaces in this filename-- localizado no diretório do bandit2
 
-### Solução: 
+**Solução:**
 
  ```bash
 ls
@@ -109,7 +109,7 @@ cat "./--spaces in this filename--"
 
 Encontrar o conteúdo do arquivo escondido no diretório inhere
 
-### Solução: 
+**Solução:**
 
 ```bash
 ls
@@ -129,7 +129,7 @@ cat ...Hiding-From-You
 
 A próxima senha está localizada em um arquivo legível a humanos
 
-### Solução: 
+**Solução:**
 
 ```bash
 ls
@@ -469,6 +469,7 @@ Senha: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 
 As credenciais para o próximo nível podem ser recuperadas enviando o senha do nível atual para uma porta no localhost no intervalo 31000 a 32000. Primeiro descubra qual dessas portas tem um servidor ouvindo sobre eles. Então descubra qual deles fala SSL/TLS e qual não faça. Há apenas 1 servidor que dará as próximas credenciais, o outros simplesmente enviarão de volta para você o que você enviar para ele.
 
+**Solução**
 
 **Solução**
 
