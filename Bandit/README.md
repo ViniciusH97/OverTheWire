@@ -36,6 +36,8 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 - [Level-13](#Level-13)
 - [Level-14](#Level-14)
 - [Level-15](#Level-15)
+- [Level-16](#Level-16)
+- [Level-17](#Level-17)
 
 ---
 
@@ -380,7 +382,7 @@ The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 
 A senha para o próximo nível é armazenada em /etc/bandit_pass/bandit14 e só pode ser lido pelo usuário bandit14. Para este nível, você não recebe a próxima senha, mas você obter uma chave SSH privada que pode ser usada para fazer login no próximo nível. Nota: localhost é um nome de host que se refere à máquina você está trabalhando.
 
-### Comandos que você pode precisar para resolver este nível
+**Comandos que você pode precisar para resolver este nível**
 
 `ssh`, `telnet`, `nc`, `openssl`, `s_client`, `nmap`
 
@@ -471,7 +473,51 @@ As credenciais para o próximo nível podem ser recuperadas enviando o senha do 
 
 **Solução**
 
-**Solução**
+Com acesso remoto ao usuário `bandit14@bandit:~$`, realize o mapeamento das portas 31000 à 32000 com o nmap:
 
+```bash
+nmap -p 31000-32000 localhost
+```
 
+Com o comando acima podemos saber quais portas estão abertas para realizar o envio da senha. 
+
+Vamos criar um diretório temporário:
+
+```bash
+mktemp -d
+```
+
+Entre no diretório criado:
+
+```bash
+cd /tmp/[diretorio]
+```
+
+Crie o arquivo `txt` com a senha:
+```bash
+echo "kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx" > senha.txt
+```
+
+Agora, enviaremos a senha para todas as portas mapeadas até encontrar a chave privada:
+
+```bash
+cat senha.txt | openssl s_client -connect localhost:[PORTA] -quiet
+```
+
+Na resposta de alguma dessas portas irá retornar a chave privada RSA, copie para o arquivo `sshkey.private` e envie para host bandit17:
+
+```bash
+ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
+```
+
+--- 
+
+## Level 17
+
+Existem 2 arquivos no homedirectory: passwords.old e passwords.new. A senha para o próximo nível está em passwords.new e é a única linha que foi alterada entre passwords.old e passwords.new
+
+> OBS: se você resolveu esse nível e vê ‘Byeye!’ quando tentar para entrar no bandido18, isso está relacionado ao próximo nível, bandit19
+Comandos que você pode precisar para resolver este nível
+
+- cat, grep, ls, diff
 
