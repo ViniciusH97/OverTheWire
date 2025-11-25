@@ -12,8 +12,8 @@ Wargames é a coleção de jogos do OverTheWire, cada jogo possuem levels(nívei
 São eles:
 
 - [Bandit](https://github.com/ViniciusH97/OverTheWire/tree/main/Bandit)
-- Leviathan
 - Natas
+- Leviathan
 - Kripton
 - Narnia
 - Behermoth
