@@ -55,6 +55,12 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 password: bandit0
 ```
 
+---
+
+<img width="842" height="653" alt="Captura de tela 2025-11-27 205036" src="https://github.com/user-attachments/assets/8a79de9e-fe0a-4588-ba07-a682e779526c" />
+
+---
+
 Comandos utilizados para visualizar o conteúdo do arquivo `readme`:
 
 ```bash
