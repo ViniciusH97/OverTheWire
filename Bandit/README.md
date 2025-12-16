@@ -524,6 +524,7 @@ ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
 Existem 2 arquivos no homedirectory: passwords.old e passwords.new. A senha para o próximo nível está em passwords.new e é a única linha que foi alterada entre passwords.old e passwords.new
 
 > OBS: se você resolveu esse nível e vê ‘Byeye!’ quando tentar para entrar no bandido18, isso está relacionado ao próximo nível, bandit19
+
 Comandos que você pode precisar para resolver este nível
 
 - cat, grep, ls, diff
@@ -546,4 +547,10 @@ Senha: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
 
 A senha para o próximo nível é armazenada em um arquivo readme em o homedirectory. Infelizmente, alguém modificou .bashrc para fazer loguem-no quando fizerem sessão com o SSH.
 
+Comandos que você pode precisar para resolver este nível:
+
+ssh, ls, cat
+
 **Solução**
+
+
