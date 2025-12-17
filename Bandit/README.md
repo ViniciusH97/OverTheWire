@@ -478,6 +478,10 @@ Senha: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 
 As credenciais para o próximo nível podem ser recuperadas enviando o senha do nível atual para uma porta no localhost no intervalo 31000 a 32000. Primeiro descubra qual dessas portas tem um servidor ouvindo sobre eles. Então descubra qual deles fala SSL/TLS e qual não faça. Há apenas 1 servidor que dará as próximas credenciais, o outros simplesmente enviarão de volta para você o que você enviar para ele.
 
+Comandos que podem ser úteis para resolver o level:
+
+- `ssh`, `telnet`, `nc`, `ncat`, `socat`, `openssl`, `s_client`, `nmap`, `netstat`, `ss`.
+
 **Solução**
 
 Com acesso remoto ao usuário `bandit14@bandit:~$`, realize o mapeamento das portas 31000 à 32000 com o nmap:
