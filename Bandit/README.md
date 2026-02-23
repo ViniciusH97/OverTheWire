@@ -413,6 +413,10 @@ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```bash
 chmod 600 sshkey.private
 ```
+ou
+```bash
+chmod u+rwx sshkey.private
+```
 E execute o comando novamente
 ```bash
 ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
@@ -535,7 +539,7 @@ Comandos que você pode precisar para resolver este nível
 
 **Solução**
 
-Para solucionar esse level 17 precisamos saber oque foi alterado do arquivo `passswords.old` para o arquivo `passwords.new`. Vamos utilizar o `diff` para saber a linha e o conteúdo exato que foi alterado nos aquivos:
+Para solucionar esse level 17 precisamos saber oque foi alterado do arquivo `passwords.old` para o arquivo `passwords.new`. Vamos utilizar o `diff` para saber a linha e o conteúdo exato que foi alterado nos aquivos:
 
 ```bash
 diff passwords.old passwords.new
