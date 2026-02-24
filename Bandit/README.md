@@ -421,8 +421,8 @@ E execute o comando novamente
 ```bash
 ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
+acesse a pasta e mostre a senha
 ```bash
-# acesse a pasta e mostre a senha
 cd /etc/bandit_pass/ && cat bandit14
 ```
 
@@ -440,8 +440,9 @@ ssh, telnet, nc, openssl, s_client, mapa
 
 **Solução**
 
+Enviar a senha bandit14 para o localhost na porta 30000
+
 ```bash
-# Enviar a senha bandit14 para o localhost na porta 30000
 cat bandit14 | nc localhost 30000
 ```
 **Senha:** 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
