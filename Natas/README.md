@@ -56,7 +56,7 @@ httpx -m POST http://natas1.natas.labs.overthewire.org/ --auth natas1 0nzCigAq7t
 ou com o `curl`
 
 ```bash
-curl -X POST 
+curl -X POST http://natas1.natas.labs.overthewire.org/ -u natas1 
 ```
 ![image4](images/image4.png)
 
