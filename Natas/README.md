@@ -27,3 +27,16 @@ Password: natas0
 URL:      http://natas0.natas.labs.overthewire.org
 
 ![image1](images/image1.png)
+
+---
+
+### Level 1
+
+A senha pode ser visualizada no código fonte da página, utilizando a opção `View Page Source`.
+
+
+![image2](images\image2.png)
+
+senha: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq 
+
+---
