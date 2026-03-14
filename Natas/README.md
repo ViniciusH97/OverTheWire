@@ -24,4 +24,7 @@ Um navegador de webbrowser, curl, proxy ZAP
 
 Acesso à aplicação web `http://natas0.natas.labs.overthewire.org`.
 
-Username: natas0 Password: natas0 URL: http://natas0.natas.labs.overthewire.org
+Username: natas0
+Password: natas0
+URL:      http://natas0.natas.labs.overthewire.org
+
