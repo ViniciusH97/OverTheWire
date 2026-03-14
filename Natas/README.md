@@ -22,9 +22,8 @@ Um navegador de webbrowser, curl, proxy ZAP
 
 ### Level 0
 
-Acesso à aplicação web `http://natas0.natas.labs.overthewire.org`.
-
 Username: natas0
 Password: natas0
 URL:      http://natas0.natas.labs.overthewire.org
 
+![image1](images/image1.png)
