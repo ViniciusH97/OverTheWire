@@ -30,13 +30,36 @@ URL:      http://natas0.natas.labs.overthewire.org
 
 ---
 
-### Level 1
+### Level 0 -> Level 1
 
 A senha pode ser visualizada no código fonte da página, utilizando a opção `View Page Source`.
 
 
 ![image2](images/image2.png)
 
-senha: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq 
+Password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq 
+
+---
+
+### Level 1 -> Level 2
+
+Como o clique direito está bloqueado optei por utilizar a requisição `POST` do login pela ferramenta `httpx`. É possível utilizar o curl também.
+
+Comando:
+
+```bash
+httpx -m POST http://natas1.natas.labs.overthewire.org/ --auth natas1 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+```
+
+![image3](images/image3.png)
+
+ou com o `curl`
+
+```bash
+curl -X POST 
+```
+![image4](images/image4.png)
+
+Password: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
 
 ---
