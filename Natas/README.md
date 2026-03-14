@@ -15,3 +15,16 @@ URL:      http://natas0.natas.labs.overthewire.org
 Ferramentas que você pode achar úteis para resolver este jogo de guerra
 
 Um navegador de webbrowser, curl, proxy ZAP
+
+## ìndice
+
+- [Level 0](#Level-0)
+
+### Level 0
+
+Acesso à aplicação web `http://natas0.natas.labs.overthewire.org`.
+
+Username: natas0
+Password: natas0
+URL:      http://natas0.natas.labs.overthewire.org
+
