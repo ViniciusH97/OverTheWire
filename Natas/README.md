@@ -27,7 +27,6 @@ Password: natas0
 URL:      http://natas0.natas.labs.overthewire.org
 
 
-
 ---
 
 ### Level 0 -> Level 1
