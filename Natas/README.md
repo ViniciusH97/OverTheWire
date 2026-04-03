@@ -26,7 +26,7 @@ Username: natas0
 Password: natas0
 URL:      http://natas0.natas.labs.overthewire.org
 
-![image1](images/image1.png)
+
 
 ---
 
@@ -35,7 +35,7 @@ URL:      http://natas0.natas.labs.overthewire.org
 A senha pode ser visualizada no código fonte da página, utilizando a opção `View Page Source`.
 
 
-![image2](images/image2.png)
+
 
 Password: 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq 
 
@@ -51,14 +51,14 @@ Comando:
 httpx -m POST http://natas1.natas.labs.overthewire.org/ --auth natas1 0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
 ```
 
-![image3](images/image3.png)
+
 
 ou com o `curl`
 
 ```bash
 curl -X POST http://natas1.natas.labs.overthewire.org/ -u natas1 
 ```
-![image4](images/image4.png)
+
 
 Password: TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
 
