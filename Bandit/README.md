@@ -39,6 +39,7 @@ Observação para VMs: Você pode não conseguir se conectar ao overthewire.org 
 - [Level-16](#Level-16)
 - [Level-17](#Level-17)
 - [Level-18](#Level-18)
+- [Level-19](#Level-19)
 
 ---
 
@@ -554,6 +555,21 @@ Senha: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
 
 ## Level 18
 
-A senha para o próximo nível é armazenada em um arquivo readme em o homedirectory. Infelizmente, alguém modificou .bashrc para fazer loguem-no quando fizerem sessão com o SSH.
+A senha para o próximo nível é armazenada em um arquivo `readme` em o homedirectory. Infelizmente, alguém modificou .bashrc para fazer loguem-no quando fizerem sessão com o SSH.
 
 
+Para conseguir ler o arquivo antes da sessão fechar, é recomendado utilizar o comando `cat`, como demonstrado abaixo:
+
+```bash
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+```
+
+password: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+
+---
+
+## Level 19
+
+Para obter acesso ao próximo nível, você deve usar o binário setuid no homedirectory. Executá-lo sem argumentos para descobrir como para usá-lo. A senha para este nível pode ser encontrada no habitual lugar (/etc/bandit_pass), depois de ter usado o binário setuid.
